@@ -58,3 +58,5 @@ let basicMathematics = {
 //Calling method qube
 basicMathematics.qube(4);
 basicMathematics.square(5);
+//Math function for random numbers
+console.info('Random number between 0 and 10 is: ', Math.floor(Math.random()*11));
