@@ -9,6 +9,7 @@ let student = JSON.parse(rawdata);
 console.log(student);
 
 // Accessing to object properties
+
 console.log(student.districts[15], student.population);
 
 // asyncronus reading
@@ -23,4 +24,5 @@ function readContent(callback) {
 readContent(function (err, content) {
     console.log(content);
 });
+
 
