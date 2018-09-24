@@ -59,8 +59,18 @@ app.get('/groups', (request, response)=>{
     response.end(JSON.stringify(contacts.list_groups()));
 });
 
-//
+//HTTP - GET http://localhost:3000/groups/Dev
+app.get('/groups/:name', (req,res)=>{
+    console.log('groups');
+    res.setHeader('content-type','application/json');
+    res.end(JSON.stringify(contacts.get_members(req.params.name)));
+});
 
-//
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+/*//development only
+if('development' == app.get('env')){
+    app.use(express.errorHandler());
+}*/
+
+http.createServer(app).listen(port , () => console.log(`Example app listening on port ${port}!`));
+
 

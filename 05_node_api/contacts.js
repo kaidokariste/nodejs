@@ -27,7 +27,6 @@ exports.query = function (number) {
 exports.query_by_arg = function (arg, value) {
     let json_result = JSON.parse(read_json_file());
     var result = json_result.result;
-    console.log(arg, value)
 
     for (var i=0; i < result.length; i++){
         var contact = result[i];
