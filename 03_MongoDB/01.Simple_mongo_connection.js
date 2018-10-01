@@ -44,3 +44,30 @@ john_douglas.save((err) => {
         console.log('Contact succesfully stored');
     }
 });
+
+//Search a contact
+Contact.find({groups:'Dev', title: 'Mr. '}, (err,result)=> {
+    if (err) {
+        console.error(err);
+    } else {
+        console.dir(result);
+    }
+});
+
+//Find one for deletion
+Contact.findOne({primarycontactnumber: '+359444223345'}, (err,data)=>{
+    if (err) {
+        console.log(err);
+        return;
+    } else {
+        if(!data){
+            console.log('not found');
+            return;
+        }else {
+            data.remove((err)=>{
+                if(!err) {data.remove();}
+                else{console.log(err)}
+            });
+        }
+    }
+});
