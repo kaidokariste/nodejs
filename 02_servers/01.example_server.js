@@ -1,5 +1,5 @@
 let http = require('http');
-let dt = require('./modDateTime');
+let dt = require('../01_syntax_basics/01_modDateTime');
 
 http.createServer(function (req, res) {
     res.writeHead(200, {'Content-Type': 'text/html'});
