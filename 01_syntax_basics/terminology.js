@@ -4,18 +4,37 @@ var myFamilyMembers; //declaring variable with no value
 var familyMemeber1 = "Liis";
 var familyMemeber2 = "Kaido";
 var myFamilyMembers = familyMemeber1 + " ja " + familyMemeber2;
+var remove = ~-2
 
 console.log(familyMemeber1);
 console.log(familyMemeber2 + ", this is me"); // concatenate strings
 console.log(myFamilyMembers);
 console.log(100 + 50); // adding numbers together
+console.log('Tilde operator ' + remove); // ~ operator returns -(n+1) meaning for -1 it returns 0, -2 returns 1
 
 
-// Arrays
+/*Arrays*/
 var stuff = []; // empty array or can be defined also var stuff = new Array();
 stuff.push('bike','car','bear'); //add new items => [ 'bike', 'car', 'bear' ]
-stuff.pop(); //=> [ 'bike', 'car' ]
-var firstStuff =  stuff.shift();  //=> bike [ 'car' ]
+stuff.pop(); //=> pops out last eleemnt [ 'bike', 'car' ]
+var firstStuff =  stuff.shift();  //move firts array element to variable => bike [ 'car' ]
+console.log(stuff); //=>['car']
+
+
+//Deleting certain array element
+/*
+array.splice(index, howMany, [element1][, ..., elementN]);
+
+index − Index at which to start changing the array.
+howMany − An integer indicating the number of old array elements to remove. If howMany is 0, no elements are removed.
+element1, ..., elementN − The elements to add to the array. If you don't specify any elements, splice simply removes the elements from the array.
+*/
+
+var someTeams = ['Flyers','Penguins','Wolves','Hornets','Ducks'];
+console.log(someTeams); //=>[ 'Flyers', 'Penguins', 'Wolves', 'Hornets', 'Ducks' ]
+
+someTeams.splice(-2,1)//(0,1) removes Flyers, (-2,1) removes hornets
+console.log(someTeams);
 
 var family = [
     "Kaido", //numbers start at 0
@@ -25,8 +44,8 @@ var family = [
 ];
 
 //Loop over array
-var peopleCount = family.length, // return length of array
-    i;
+var peopleCount = family.length; // return length of array
+var i;
 
 /* checking to make sure there are people in the list*/
 if (peopleCount > 0) {
