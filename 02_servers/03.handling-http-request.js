@@ -27,7 +27,7 @@ function handle_bad_request(response) {
 }
 
 function handle_request(request, response) {
-
+    console.log(request.body)
     switch (request.method) {
         case 'GET':
             handle_get_request(response);

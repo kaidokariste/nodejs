@@ -10,7 +10,7 @@ console.log(student);
 
 // Accessing to object properties
 
-console.log(student.districts[15], student.population);
+console.log('Student lives', student.districts[15], student.population);
 
 // asyncronus reading
 function readContent(callback) {
