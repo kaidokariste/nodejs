@@ -14,7 +14,6 @@ function getFamilyMemberNames(familiList) { // expecting array as argument
     });
 }
 
-/*Call function*/
 getFamilyMemberNames(family);
 
 // Self invoking anonymous function
@@ -49,7 +48,8 @@ basicMathematics.square(5);
 //Math function for random numbers
 console.info('Random number between 0 and 10 is: ', Math.floor(Math.random()*11));
 
-// Using the Rest Parameter (...)
+// REST PARAMETER  (...)
+console.log ('***REST PARAMETER***');
 /*
 * A rest parameter is defined using the ellipsis (...) to signify that that parameter
 * is a placeholder for any number of arguments
@@ -68,6 +68,7 @@ const max = function(...values) {
 console.log(max(2, 1, 7, 4));
 
 // SPREAD OPERATOR
+console.log ('***SPREAD OPERATORS***');
 /*
 * The spread operator may be used with any iterable object, and it expands,
 * or spreads, the contained values into discrete values. Used when calling a function
